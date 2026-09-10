@@ -2,7 +2,7 @@
   width: 100%;
   margin: 0;
   padding: 2rem;
-  text-align: left;
+  text-align: center;
 }
 
 .logo {
@@ -52,6 +52,9 @@ body {
   flex-direction: column;
   overflow-x: hidden;
 
+}
+footer{
+  background-color: black;
 }
 html {
   margin: 0;
@@ -134,19 +137,71 @@ button:hover {
   padding: 2px 8px;
   border-radius: 4px;
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
 }
 .box{
   background-color: rgb(0,0,0,0.8);
   padding: 20px;
   border-radius: 4px;
   display: inline-block;
-  align-items: center;
-  justify-content: center;
   position: relative;
   z-index: 1;
 }
+.box-skills{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
 .skills-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: aqua;
+}
+.imgbox{
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin: 13px;
+}
+.skill-logo {
+  opacity: 1;
+  display: block;
+  width: 50px;
+  height: 50px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+.infoimg {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 65%);
+  -ms-transform: translate(-50%, -1%)
+
+}
+
+.imgbox:hover .skill-logo {
+  transform: scale(1.2);
+}
+
+.imgbox:hover .infoimg {
+  opacity: 1;
+}
+.textimg {
+  background-color: blue;
+  width: 100px;
+  text-align: center;
+  color: white;
+  border-collapse: collapse;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: white;
+  padding-bottom: 2px;
+  padding-top: 2px;
 }
